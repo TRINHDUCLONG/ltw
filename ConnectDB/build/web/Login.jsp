@@ -26,8 +26,8 @@
                 <p class="text-danger">${mess}</p>
                 <p class="text-danger">${register}</p>
 
-                <input name="user"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
-                <input name="pass"  type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <input name="user" value="${username}" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+                <input name="pass" value="${password}" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
                 <div class="form-group form-check">
                     <input name="remember" value="1" type="checkbox" class="form-check-input" id="exampleCheck1">

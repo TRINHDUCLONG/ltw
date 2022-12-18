@@ -20,11 +20,11 @@
 
             <div class="container">
                 <div class="row">
-                    <jsp:include page="Left.jsp"></jsp:include>
-                <div class="col-sm-9">
-                    <div class="row">
+                <jsp:include page="Left.jsp"></jsp:include>
+                    <div class="col-sm-9">
+                        <div id="content" class="row">
                         <c:forEach items="${listP}" var="o">
-                            <div class="col-12 col-md-6 col-lg-4">
+                            <div class="product col-12 col-md-6 col-lg-4">
                                 <div class="card">
                                     <img class="card-img-top" src="${o.image}" alt="Card image cap">
                                     <div class="card-body">
@@ -42,12 +42,69 @@
                                 </div>
                             </div>
                         </c:forEach>
+                          
                     </div>
+                        <br>
+                      
+                    <button onclick="loadMore()" class="btn btn-primary">Load more</button>
                 </div>
 
             </div>
         </div>
         <jsp:include page="Footer.jsp"></jsp:include>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+                        function loadMore() {
+                            var amount = document.getElementsByClassName("product").length;
+                            $.ajax({
+                                url: "/ConnectDB/load",
+                                type: "get", //send it through get method
+                                data: {
+                                    exits: amount
+                                },
+                                success: function (data) {
+                                    var row = document.getElementById("content");
+                                    row.innerHTML += data;
+                                },
+                                error: function (xhr) {
+                                    //Do Something to handle error
+                                }
+                            });
+                        }
+                        function searchByName(param) {
+                            var txtSearch = param.value;
+                                $.ajax({
+                                url: "/ConnectDB/searchAjax",
+                                type: "get", //send it through get method
+                                data: {
+                                    txt: txtSearch
+                                },
+                                success: function (data) {
+                                    var row = document.getElementById("content");
+                                    row.innerHTML = data;
+                                },
+                                error: function (xhr) {
+                                    //Do Something to handle error
+                                }
+                            });
+                        }
+                        function load(cateid){
+                              $.ajax({
+                                url: "/ConnectDB/category",
+                                type: "get", //send it through get method
+                                data: {
+                                    cid: cateid
+                                },
+                                success: function (reponeseData) {
+                                    var row = document.getElementById("content");
+                                    row.innerHTML = reponeseData;
+                                },
+                                error: function (xhr) {
+                                    //Do Something to handle error
+                                }
+                            });
+                        }
+        </script>
     </body>
 </html>
 

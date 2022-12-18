@@ -37,7 +37,9 @@ public class HomeControl extends HttpServlet {
         // lay data  tu dao
 
         ProductDao productDao = new ProductDao();
-        List<Product> list = productDao.getAllProduct();
+//        List<Product> list = productDao.getAllProduct();
+        List<Product> list = productDao.getTop6();
+
         List<Category> listC = productDao.getAllCategory();
         Product lasProduct = productDao.getLastProduct();
 

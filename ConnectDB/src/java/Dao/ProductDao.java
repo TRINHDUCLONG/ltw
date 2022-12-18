@@ -183,7 +183,33 @@ public class ProductDao {
 
         return list;
     }
+  public List<Product> searchByPrice(String txtSearch) {
+        List<Product> list = new ArrayList<>();
+        // query lay tat ca san pham co ten nhu yeu cau co trong database qlbh
+        String query = "SELECT  * FROM [product] where [price] like ? ;";
+        try {
+            conn = new DBContext().getConnection(); // mo ket noi sql
+            ps = conn.prepareStatement(query); // nem cau lenh vao sql
+            ps.setString(1, "%" + txtSearch + "%"); //set cid vao cham hoi 1
+            rs = ps.executeQuery();// kq tra ve
+            while (rs.next()) {
 
+                list.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6)));
+
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return list;
+    }
     public List<Product> getProductBySellID(int id) {
         List<Product> list = new ArrayList<>();
         // query lay tat ca san pham theo sell id
@@ -270,12 +296,63 @@ public class ProductDao {
     
     
 
-//         kiem tra list product Category lastProduct
-    public static void main(String[] args) {
-        ProductDao productDao = new ProductDao();
+  
 
-        Product p = productDao.getProductByID("5");
-        System.out.println(p);
+    public List<Product> getTop6() {
+           List<Product> list = new ArrayList<>();
+        // query lay tat ca san pham co trong database qlbh
+        String query = "SELECT top 6 * FROM [product];";
+        try {
+            conn = new DBContext().getConnection(); // mo ket noi sql
+            ps = conn.prepareStatement(query); // nem cau lenh vao sql
+            rs = ps.executeQuery();// kq tra ve
+            while (rs.next()) {
 
-    }
+                list.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6)));
+
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return list;
+}
+    public List<Product> getNext6Product(int amount) {
+           List<Product> list = new ArrayList<>();
+        // query lay tat ca san pham co trong database qlbh
+        String query = "SELECT *\n"
+                + "  FROM product\n"
+                + " ORDER BY id\n"
+                + "OFFSET ? ROWS\n"
+                + " FETCH NEXT 6 ROWS ONLY";
+        try {
+            conn = new DBContext().getConnection(); // mo ket noi sql
+            ps = conn.prepareStatement(query); // nem cau lenh vao sql
+            ps.setInt(1, amount);
+            rs = ps.executeQuery();// kq tra ve
+            while (rs.next()) {
+
+                list.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6)));
+
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return list;
+}
 }

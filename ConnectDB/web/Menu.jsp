@@ -54,7 +54,7 @@
                         </c:if>
                         <c:if test="${sessionScope.acc == null}">
                             <li class="nav-item">
-                                <a class="nav-link" href="Login.jsp">Login</a>
+                                <a class="nav-link" href="login">Login</a>
                             </li>
                         </c:if>
 
@@ -62,7 +62,7 @@
 
                     <form action="search" method="post" class="form-inline my-2 my-lg-0">
                         <div class="input-group input-group-sm">
-                            <input value="${txtS}" name="txt" type="text" class="form-control searchTerm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                            <input oninput="searchByName(this)" value="${txtS}" name="txt" type="text" class="form-control searchTerm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-secondary btn-number searchButton">
                                     <i class="fa fa-search"></i>

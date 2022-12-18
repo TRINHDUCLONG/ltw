@@ -67,165 +67,52 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <!--begin of menu-->\n");
-      out.write("        <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n");
-      out.write("            <div class=\"container\">\n");
-      out.write("                <a class=\"navbar-brand\" href=\"Home\">Shop Shose</a>\n");
-      out.write("                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
-      out.write("                    <span class=\"navbar-toggler-icon\"></span>\n");
-      out.write("                </button>\n");
       out.write("\n");
-      out.write("                <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarsExampleDefault\">\n");
-      out.write("                    <ul class=\"navbar-nav m-auto\">\n");
-      out.write("                        <li class=\"nav-item\">\n");
-      out.write("                            <a class=\"nav-link\" href=\"#\">Manager Account</a>\n");
-      out.write("                        </li>\n");
-      out.write("                        <li class=\"nav-item\">\n");
-      out.write("                            <a class=\"nav-link\" href=\"#\">Hello long</a>\n");
-      out.write("                        </li>\n");
-      out.write("                        <li class=\"nav-item\">\n");
-      out.write("                            <a class=\"nav-link\" href=\"#\">Logout</a>\n");
-      out.write("                        </li>\n");
-      out.write("                        <li class=\"nav-item\">\n");
-      out.write("                            <a class=\"nav-link\" href=\"#\">Login</a>\n");
-      out.write("                        </li>\n");
-      out.write("                    </ul>\n");
       out.write("\n");
-      out.write("                    <form action=\"search\" method=\"post\" class=\"form-inline my-2 my-lg-0\">\n");
-      out.write("                        <div class=\"input-group input-group-sm\">\n");
-      out.write("                            <input name=\"txt\" type=\"text\" class=\"form-control searchTerm\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\" placeholder=\"Search...\">\n");
-      out.write("                            <div class=\"input-group-append\">\n");
-      out.write("                                <button type=\"submit\" class=\"btn btn-secondary btn-number searchButton\">\n");
-      out.write("                                    <i class=\"fa fa-search\"></i>\n");
-      out.write("                                </button>\n");
-      out.write("                            </div>\n");
-      out.write("                        </div>\n");
-      out.write("                        <a class=\"btn btn-success btn-sm ml-3\" href=\"show\">\n");
-      out.write("                            <i class=\"fa fa-shopping-cart\"></i> Cart\n");
-      out.write("                            <span class=\"badge badge-light\">3</span>\n");
-      out.write("                        </a>\n");
-      out.write("                    </form>\n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("        </nav>\n");
-      out.write("        <section class=\" jumbotron text-center masthead \">\n");
+      out.write("        ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Menu.jsp", out, false);
+      out.write("\n");
+      out.write("\n");
       out.write("            <div class=\"container\">\n");
-      out.write("                <h1 class=\"jumbotron-heading\">Siêu thị giày chất lượng cao</h1>\n");
-      out.write("                \n");
-      out.write("                <p class=\"lead text-muted mb-0 \" >Uy tín tạo nên thương hiệu với hơn 10 năm cung cấp các sản phầm giày chính hảng chất lượng </p>\n");
-      out.write("            </div>\n");
-      out.write("        </section>\n");
-      out.write("        <!--end of menu-->\n");
-      out.write("        <div class=\"container\">\n");
-      out.write("            <div class=\"row\">\n");
-      out.write("                <div class=\"col\">\n");
-      out.write("                    <nav aria-label=\"breadcrumb\">\n");
-      out.write("                        <ol class=\"breadcrumb\">\n");
-      out.write("                            <li class=\"breadcrumb-item\"><a href=\"Home\">Home</a></li>\n");
-      out.write("                            <li class=\"breadcrumb-item\"><a href=\"#\">Category</a></li>\n");
-      out.write("                            <li class=\"breadcrumb-item active\" aria-current=\"#\">Sub-category</li>\n");
-      out.write("                        </ol>\n");
-      out.write("                    </nav>\n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"container\">\n");
-      out.write("            <div class=\"row\">\n");
-      out.write("                <div class=\"col-sm-3\">\n");
-      out.write("                    <div class=\"card bg-light mb-3\">\n");
-      out.write("                        <div class=\"card-header bg-primary text-white text-uppercase\"><i class=\"fa fa-list\"></i> Categories</div>\n");
-      out.write("                        <ul class=\"list-group category_block\">\n");
-      out.write("                            ");
+      out.write("                <div class=\"row\">\n");
+      out.write("                ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Left.jsp", out, false);
+      out.write("\n");
+      out.write("                    <div class=\"col-sm-9\">\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("                        ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("\n");
-      out.write("                        </ul>\n");
       out.write("                    </div>\n");
-      out.write("                    <div class=\"card bg-light mb-3\">\n");
-      out.write("                        <div class=\"card-header bg-success text-white text-uppercase\">Shose New</div>\n");
-      out.write("                        <div class=\"card-body\">\n");
-      out.write("                            <img class=\"img-fluid\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.image}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" />\n");
-      out.write("                            <h5 class=\"card-title\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h5>\n");
-      out.write("                            <p class=\"card-text\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.title}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\n");
-      out.write("                            <p class=\"bloc_left_price\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.price}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write(" $</p>\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>\n");
-      out.write("                </div>\n");
-      out.write("\n");
-      out.write("                <div class=\"col-sm-9\">\n");
-      out.write("                    <div class=\"row\">\n");
-      out.write("                        ");
-      if (_jspx_meth_c_forEach_1(_jspx_page_context))
-        return;
-      out.write("\n");
-      out.write("                    </div>\n");
+      out.write("                    <button onclick=\"loadMore()\" class=\"btn btn-primary\">Load more</button>\n");
       out.write("                </div>\n");
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
+      out.write("        ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Footer.jsp", out, false);
       out.write("\n");
-      out.write("        <!-- Footer -->\n");
-      out.write("        <footer class=\"text-light\">\n");
-      out.write("            <div class=\"container\">\n");
-      out.write("                <div class=\"row\">\n");
-      out.write("                    <div class=\"col-md-3 col-lg-4 col-xl-3\">\n");
-      out.write("                        <h5>About</h5>\n");
-      out.write("                        <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">\n");
-      out.write("                        <p class=\"mb-0\">\n");
-      out.write("                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.\n");
-      out.write("                        </p>\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                    <div class=\"col-md-2 col-lg-2 col-xl-2 mx-auto\">\n");
-      out.write("                        <h5>Informations</h5>\n");
-      out.write("                        <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">\n");
-      out.write("                        <ul class=\"list-unstyled\">\n");
-      out.write("                            <li><a href=\"\">Link 1</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 2</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 3</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 4</a></li>\n");
-      out.write("                        </ul>\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                    <div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto\">\n");
-      out.write("                        <h5>Others links</h5>\n");
-      out.write("                        <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">\n");
-      out.write("                        <ul class=\"list-unstyled\">\n");
-      out.write("                            <li><a href=\"\">Link 1</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 2</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 3</a></li>\n");
-      out.write("                            <li><a href=\"\">Link 4</a></li>\n");
-      out.write("                        </ul>\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                    <div class=\"col-md-4 col-lg-3 col-xl-3\">\n");
-      out.write("                        <h5>Contact</h5>\n");
-      out.write("                        <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">\n");
-      out.write("                        <ul class=\"list-unstyled\">\n");
-      out.write("                            <li><i class=\"fa fa-home mr-2\"></i> My company</li>\n");
-      out.write("                            <li><i class=\"fa fa-envelope mr-2\"></i> email@example.com</li>\n");
-      out.write("                            <li><i class=\"fa fa-phone mr-2\"></i> + 33 12 14 15 16</li>\n");
-      out.write("                            <li><i class=\"fa fa-print mr-2\"></i> + 33 12 14 15 16</li>\n");
-      out.write("                        </ul>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"col-12 copyright mt-3\">\n");
-      out.write("                        <p class=\"float-left\">\n");
-      out.write("                            <a href=\"#\">Back to top</a>\n");
-      out.write("                        </p>\n");
-      out.write("                        <p class=\"text-right text-muted\">created with <i class=\"fa fa-heart\"></i> by <a href=\"https://t-php.fr/43-theme-ecommerce-bootstrap-4.html\"><i>t-php</i></a> | <span>v. 1.0</span></p>\n");
-      out.write("                    </div>\n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("        </footer>\n");
+      out.write("        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\n");
+      out.write("        <script>\n");
+      out.write("            function loadMore(){\n");
+      out.write("                  var amount = document.getElementsByClassName(\"product\").length;\n");
+      out.write("                            $.ajax({\n");
+      out.write("                                url: \"ConnectDB/load\",\n");
+      out.write("                                type: \"get\", //send it through get method\n");
+      out.write("                                data: {\n");
+      out.write("                                    exits: amount\n");
+      out.write("                                },\n");
+      out.write("                                success: function (data) {\n");
+      out.write("                                    var row = document.getElementById(\"content\");\n");
+      out.write("                                    row.innerHTML += data;\n");
+      out.write("                                },\n");
+      out.write("                                error: function (xhr) {\n");
+      out.write("                                    //Do Something to handle error\n");
+      out.write("                                }\n");
+      out.write("                            });\n");
+      out.write("            }\n");
+      out.write("        </script>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
       out.write("\n");
@@ -250,56 +137,12 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listCC}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listP}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("o");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        do {
-          out.write("\n");
-          out.write("                                <li class=\"list-group-item text-white ");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${tag == o.cid ? \"active\" : \"\"}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"><a href=\"category?cid=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.cid}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write('"');
-          out.write('>');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${o.cname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</a></li>\n");
-          out.write("                            ");
-          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-      }
-      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_c_forEach_0.doFinally();
-      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_forEach_1(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:forEach
-    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
-    _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
-    _jspx_th_c_forEach_1.setParent(null);
-    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listP}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_1.setVar("o");
-    int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
-    try {
-      int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
-      if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
           out.write("                            <div class=\"col-12 col-md-6 col-lg-4\">\n");
@@ -323,28 +166,28 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write(" $</p>\n");
           out.write("                                            </div>\n");
           out.write("                                            <div class=\"col\">\n");
-          out.write("                                                <a href=\"#\" class=\"btn btn-success btn-block\">Add to cart</a>\n");
+          out.write("                                                <a href=\"#\" class=\"btn btn-success btn-block\"><i class=\"fa fa-shopping-cart\"></i>Add to cart</a>\n");
           out.write("                                            </div>\n");
           out.write("                                        </div>\n");
           out.write("                                    </div>\n");
           out.write("                                </div>\n");
           out.write("                            </div>\n");
           out.write("                        ");
-          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
         } while (true);
       }
-      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_c_forEach_1.doFinally();
-      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
     }
     return false;
   }
