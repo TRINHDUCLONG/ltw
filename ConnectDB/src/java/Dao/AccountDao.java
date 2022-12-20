@@ -58,8 +58,112 @@ public class AccountDao {
             ps.setString(2, pass);  // truyen tham so vao dau cham hoi 2
             ps.executeUpdate();// kq tra ve
         } catch (Exception e) {
-            
+
         }
+    }
+
+    public List<Account> getAccount() {
+        List<Account> list = new ArrayList<>();
+        String query = "select * from account";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5)));
+            }
+
+        } catch (Exception e) {
+
+        }
+        return list;
+    }
+    //dem account 
+
+    public int getTotalAccount() {
+        String query = "select Count(*) from account";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+
+            }
+
+        } catch (Exception e) {
+
+        }
+        return 0;
+    }
+
+    public List<Account> pagingAccount(int index) {
+        List<Account> list = new ArrayList<>();
+        String query = "select * from account\n"
+                + "order by uID \n"
+                + "offset ? rows fetch next 5 row only; ";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, (index-1)*5);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5)));
+            }
+
+        } catch (Exception e) {
+
+        }
+        return list;
+    }
+    public void deleteAccount(String aid){
+         String query = "delete from Account where uID = ? ;";
+        try {
+            conn = new DBContext().getConnection(); // mo ket noi sql
+            ps = conn.prepareStatement(query); // nem cau lenh vao sql
+            ps.setString(1, aid); //set cid vao cham hoi 1
+            ps.executeUpdate();// kq tra ve
+        } catch (Exception e) {
+
+        }
+
+    }
+    public Account getAccountByID(String aid) {
+		String query = "select * from account where uID = ?";
+		try {
+			conn = new DBContext().getConnection();// mo ket noi voi sql
+			ps = conn.prepareStatement(query);
+			ps.setString(1, aid);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				return new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5));
+			}
+		} catch (Exception e) {
+
+		}
+		return null;
+	}
+    public void editAcc(String user, String pass, String isSell, String isAdmin, String aid) {
+		String query = "update Account set [user] = ?, pass = ?, isSell = ?, isAdmin = ? where uID = ?";
+		try {
+			conn = new DBContext().getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, user);
+			ps.setString(2, pass);
+			ps.setString(3, isSell);
+			ps.setString(4, isAdmin);
+			ps.setString(5, aid);
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+    public static void main(String[] args) {
+        AccountDao dao = new AccountDao();
+        dao.editAcc("usertest", "pass", "0", "0", "39");
+        System.out.println(dao.getAccount());
     }
 
 }

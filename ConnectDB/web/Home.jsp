@@ -35,7 +35,7 @@
                                                 <p class="btn btn-danger btn-block">${o.price} $</p>
                                             </div>
                                             <div class="col">
-                                                <a href="#" class="btn btn-success btn-block"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="addCart?id=${o.id}" class="btn btn-success btn-block"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                 url: "/ConnectDB/searchAjax",
                                 type: "get", //send it through get method
                                 data: {
-                                    txt: txtSearch
+                                    txt1: txtSearch
                                 },
                                 success: function (data) {
                                     var row = document.getElementById("content");

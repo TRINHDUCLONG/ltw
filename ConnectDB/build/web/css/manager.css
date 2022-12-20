@@ -217,3 +217,13 @@ table.table .avatar {
 .modal form label {
     font-weight: normal;
 }
+a.active{
+    color: #FFC107;
+    font-weight: bold;
+}
+a{
+    font-size: 20px;
+}
+td{
+    font-size: 20px;
+}
