@@ -22,13 +22,13 @@
                         <h5>About</h5>
                         <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                         <p class="mb-0">
-                            LIÊN HỆ ZALO : 0967585135
+                            LIÊN HỆ ZALO : 
                         </p>
                         <p class="mb-0">
-                            Địa chỉ: Số 1D Ngõ 24 Đặng Tiến Đông, Hà Nội, Vietnam
+                            Địa chỉ: 
                         </p>
                         <p class="mb-0">
-                          Điện thoại: 0964328425
+                          Điện thoại: 
                         </p>
                     </div>
 

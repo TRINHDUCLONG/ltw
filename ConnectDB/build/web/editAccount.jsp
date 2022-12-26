@@ -68,23 +68,19 @@ img {
 
 								<div class="form-group">
 									<label>IsSell</label>
-									<c:if test="${Acc.isSell == 1}">
-                                                                            <input name="isSell" class="form-control" type="text" value="1">
-									</c:if>
-									<c:if test="${Acc.isSell == 0}">
-                                                                            <input name="isSell"class="form-control" type="text" value="0">
-									</c:if>
+									
+                                                                            <input name="isSell" class="form-control" type="text" >
+									
+									
 									</td>
 
 								</div>
 								<div class="form-group">
 									<label>IsAdmin</label>
-									<c:if test="${Acc.isAdmin == 1}">
-                                                                            <input name="isAdmin" class="form-control" type="text" value="1">
-									</c:if>
-									<c:if test="${Acc.isAdmin == 0}">
-                                                                            <input name="isAdmin" class="form-control" type="text" value="0">
-									</c:if>
+									
+                                                                            <input name="isAdmin" class="form-control" type="text" >
+									
+									
 									</td>
 								</div>
 

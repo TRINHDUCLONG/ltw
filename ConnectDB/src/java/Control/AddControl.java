@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author trinh
  */
-@WebServlet(name = "AddControl", urlPatterns = {"/add"})
+@WebServlet(name = "AddControl", urlPatterns = {"/addP"})
 public class AddControl extends HttpServlet {
 
     /**

@@ -40,13 +40,15 @@ public class ManagerControl extends HttpServlet {
         HttpSession session = request.getSession();
         Account a = (Account) session.getAttribute("acc");
         // lay thong tin account trong session da dc login
-
-        int id = a.getId();
         ProductDao dao = new ProductDao();
-        List<Product> list = dao.getProductBySellID(id);
+        if (a != null) {
+            int id = a.getId();
+            List<Product> list = dao.getProductBySellID(id);
+            request.setAttribute("listP", list);
+        }
+
         List<Category> listC = dao.getAllCategory();
 
-        request.setAttribute("listP", list);
         request.setAttribute("listCC", listC); //listCategory
         request.getRequestDispatcher("ManagerProduct.jsp").forward(request, response);
 

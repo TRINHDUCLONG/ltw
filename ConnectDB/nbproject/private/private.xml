@@ -4,11 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/LTW/ConnectDB/src/java/Control/EditControl.java</file>
-            <file>file:/D:/LTW/ConnectDB/src/java/Control/EditAccControll.java</file>
-            <file>file:/D:/LTW/ConnectDB/src/java/Dao/ProductDao.java</file>
-            <file>file:/D:/LTW/ConnectDB/web/editAccount.jsp</file>
-            <file>file:/D:/LTW/ConnectDB/src/java/Dao/AccountDao.java</file>
-            <file>file:/D:/LTW/ConnectDB/web/Edit.jsp</file>
+            <file>file:/D:/LTW/ConnectDB/web/ManagerProduct.jsp</file>
+            <file>file:/D:/LTW/ConnectDB/src/java/Control/AddControl.java</file>
+            <file>file:/D:/LTW/ConnectDB/src/java/Control/HomeControl.java</file>
+            <file>file:/D:/LTW/ConnectDB/web/Menu.jsp</file>
         </group>
     </open-files>
 </project-private>

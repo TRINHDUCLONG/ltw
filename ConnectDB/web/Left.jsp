@@ -1,5 +1,4 @@
 
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="col-sm-3">
@@ -16,7 +15,8 @@
         <div class="card-header bg-success text-white text-uppercase">Last product</div>
         <div class="card-body">
             <img class="img-fluid" src="${p.image}" />
-            <h5 class="card-title">${p.name}</h5>
+            <h5 class="card-title"><a href="detail?pid=${p.id}" title="View Product">${p.name}</a></h5>
+            
             <p class="card-text">${p.title}</p>
             <p class="bloc_left_price">${p.price} $</p>
         </div>
